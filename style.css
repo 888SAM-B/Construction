@@ -5,7 +5,9 @@
     --c3:#79D7BE;
     --c4:#F6F4F0;
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;    
