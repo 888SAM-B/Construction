@@ -1,16 +1,16 @@
-:root {
-    --c1: #212121;
-    --c2: #4DA1A9;
-    --c3: #79D7BE;
-    --c4: #F6F4F0;
-}
+:root{
 
-html {
+    --c1:#212121;
+    --c2:#4DA1A9;
+    --c3:#79D7BE;
+    --c4:#F6F4F0;
+}
+html{
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-body {
+body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 500;
     color: var(--c4);
@@ -21,49 +21,43 @@ body {
     box-sizing: border-box;
 }
 
-.navbar {
-    background-color: #212121 !important;
+.navbar{
+    background-color:#212121 !important; 
     color: whitesmoke !important;
     z-index: 1;
     position: sticky;
     top: 0px;
     border-bottom: 1px solid;
 }
-
-.navbar * {
+.navbar *{
     color: aliceblue;
 }
-
-.navbar *:hover {
+.navbar *:hover{
     color: var(--c3);
 }
-
-.sep * {
+.sep *{
     display: flex;
 }
-
-.logo {
+.logo{
     font-size: 24px;
     padding-left: 8px;
-    padding-right: 30px;
+    padding-right:30px;
     width: 100%;
 }
-
-.items {
+.items{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content:space-around;
 }
-
-.img {
+.img{
     width: 100%;
     height: 90vh;
-    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("./assets/bg16.5.webp");
+    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), 
+    url("./assets/bg16.5.webp"); 
     background-position: center;
-    background-size: cover;
+    
 }
-
-.img-content {
+.img-content{
     height: 88vh;
     display: flex;
     align-items: center;
@@ -71,14 +65,13 @@ body {
     font-size: 50px;
 }
 
-.previous-works {
+.previous-works{
     width: 100%;
     margin-top: 70px;
     margin-bottom: 50px;
 }
-
-.previous-works-images {
-    margin-top: 20px;
+.previous-works-images{
+    margin-top: 20PX;
     width: 100%;
     top: 50px;
     display: flex;
@@ -86,8 +79,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
-.container-animate {
+.container-animate{
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -95,8 +87,7 @@ body {
     justify-content: center;
     border-radius: 30px;
 }
-
-.img-animate {
+.img-animate{
     width: 400px;
     height: 300px;
     background-position: center;
@@ -108,51 +99,49 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-.img-animate h2 {
+.img-animate h2{
     opacity: 0;
     color: aliceblue;
     margin: 0px;
     transition: all 1s;
 }
-
-.img-animate:hover h2 {
-    opacity: 1;
-}
-
-.img-animate:hover {
+.img-animate:hover h2{
+            opacity: 1;
+        }
+.img-animate:hover{
     padding: 1%;
     color: aliceblue;
 }
-
-.residential {
+.residential{
     background-image: url("https://www.shernaproperties.com/wp-content/uploads/2023/05/luxury-villa.jpg");
 }
-
-.industrial {
+.industrial{
     background-image: url("https://cdn.pixabay.com/photo/2024/06/29/11/00/ai-generated-8861246_640.jpg");
 }
-
-.infrastructral {
+.infrastructral{
     background-image: url("https://img.freepik.com/free-photo/brdige_1127-383.jpg");
 }
-
-.commercial {
+.commercial{
     background-image: url("https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg");
 }
 
-.residential:hover,
-.industrial:hover,
-.infrastructral:hover,
-.commercial:hover {
-    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121);
+.residential:hover{
+    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://www.shernaproperties.com/wp-content/uploads/2023/05/luxury-villa.jpg");
 }
-
-::-webkit-scrollbar {
+.industrial:hover{
+    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://cdn.pixabay.com/photo/2024/06/29/11/00/ai-generated-8861246_640.jpg");
+}
+.infrastructral:hover{
+    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://img.freepik.com/free-photo/brdige_1127-383.jpg");
+}
+.commercial:hover{
+    background-image: linear-gradient(to bottom, #212121, #0000003e, #212121), url("https://cdn.britannica.com/96/115096-050-5AFDAF5D/Bellagio-Hotel-Casino-Las-Vegas.jpg");
+}   
+::-webkit-scrollbar{
     display: none;
 }
-
-.pricing {
+.pricing{
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -160,112 +149,25 @@ body {
     flex-wrap: wrap;
     margin-bottom: 50px;
 }
-
-.pri-image img {
-    height: 450px;
+.pri-image img{
+    height: 400px;
 }
-
-.pricing * {
-    padding: 1px;
+.pricing *{
+    padding: 1PX;
 }
-
-.pri-content {
+.pri-content{
     width: 68%;
 }
-
-.pri-content p {
-    font-size: 20px;
+.pri-content p{
+    font-size:20px;
     text-align: justify;
 }
-
-a {
+a{
     color: aliceblue;
     text-decoration: none;
 }
-
-a:hover {
-    color: var(--c3);
-}
-
-a:visited {
-    color: aliceblue;
-}
-
-a:active {
-    color: var(--c3);
-}
-
-.contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-bottom: 1px solid;
-    margin-bottom: 50px;
-}
-
-form {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.f-c {
-    display: flex;
-    width: 90%;
-}
-
-.row1 {
-    margin-top: 20px;
-    display: flex;
-    width: 50%;
-    padding: 10px;
-}
-
-.item {
-    width: 50%;
-    padding: 10px;
-}
-
-input {
-    width: 100%;
-    background-color: #212121;
-    border: none;
-    outline: 1px solid aliceblue;
-    color: aliceblue;
-    padding: 10px;
-}
-
-textarea {
-    width: 100%;
-    height: 150px;
-    background-color: #212121;
-    border: none;
-    outline: 1px solid aliceblue;
-    color: aliceblue;
-}
-
-.item h5 {
-    width: 50%;
-}
-
-.br {
-    border-right: 1px solid;
-}
-
-h2 {
-    font-size: 24px;
-    margin-left: 20px;
-    padding-bottom: 7px;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    margin-bottom: 40px;
-}
-
-.but {
-    width: 200px;
+.but{
+    width:200px;
     padding: 2px;
     border-radius: 15px;
     outline: none;
@@ -273,61 +175,126 @@ h2 {
     border: none;
     background-color: aliceblue;
     color: #212121;
-    margin: 20px;
 }
+    a {
+        color: aliceblue; /* Default color */
+        text-decoration: none; /* Prevents underline */
+    }
+    
+    a:hover {
+        color: var(--c3); /* Optional: color when hovering */
+    }
+    
+    a:visited {
+        color: aliceblue; /* Keeps the same color after clicking */
+    }
+    
+    a:active {
+        color: var(--c3); /* Optional: color when actively clicking */
+    }
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    border-bottom: 1px solid;
+    margin-bottom:50px; 
+}   
+form{
+    
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+} 
+.f-c{
 
-.img-animate h2 {
+    display: flex;
+    width: 90%;
+}
+.row1{
+    margin-top: 20px;
+    display: flex;
+    width:50%;
+    padding: 10px;
+}
+.item{
+    width: 50%;
+    padding: 10px;
+}
+input{
+    width: 100%;
+    background-color: #212121;
+    border: none;
+    outline: 1px solid aliceblue;
+    color: aliceblue;
+    padding: 10px;
+}
+textarea{
+    width:100%;
+    height: 150px;
+    background-color: #212121;
+    border: none;
+    outline: 1px solid aliceblue;
+    color: aliceblue;
+}
+.item h5{
+    width: 50%;
+}
+.br{
+    border-right:1px solid ;
+}
+h2{
+    
+    font-size: 24px;
+    margin-left: 20px;
+    padding-bottom: 7px;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    margin-bottom: 40px;
+}
+.but{
+    margin: 20px;
+
+}
+.img-animate h2{
     text-decoration: none;
 }
-
-@media screen and (max-width: 991px) {
-    .mob {
+@media screen and (max-width:991px) {
+    
+    .mob{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
     }
-
-    .mob button {
+    .mob button{
         display: flex;
         width: 20%;
         align-items: end;
         justify-content: center;
     }
-
-    button span {
+    button span{
         font-size: 30px;
     }
-
-    .img,
-    .img-content {
+    .img,.img-content{
         height: 50vh;
         font-size: 40px;
     }
-
-    .pri-content {
+    .pri-content{
         width: 95%;
     }
-
-    .f-c {
+    .f-c{
         display: block;
     }
-
-    .row1 {
+    .row1{
         width: 100%;
     }
-
-    .br {
+    .br{
         border: none;
     }
-
-    .item h5 {
+    .item h5{
         width: 60%;
     }
-
-    .img-animate {
-        width: 100%;
-        height: auto;
-        margin: 10px 0;
     }
-}
