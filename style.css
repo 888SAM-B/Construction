@@ -6,7 +6,7 @@
     --c4:#F6F4F0;
 }
 html{
-    overflow-x: hidden;
+    
     scroll-behavior: smooth;
 }
 
@@ -21,14 +21,15 @@ body{
     box-sizing: border-box;
 }
 
-.navbar{
-    background-color:#212121 !important; 
+.navbar {
+    background-color: #212121 !important;
     color: whitesmoke !important;
-    z-index: 1;
+    z-index: 1000; /* Higher to ensure it's above other elements */
     position: sticky;
-    top: 0px;
+    top: 0; /* Position it at the top of the viewport */
     border-bottom: 1px solid;
 }
+
 .navbar *{
     color: aliceblue;
 }
