@@ -80,34 +80,36 @@
   </div>
   <h2>CONTACT US</h2>
   <div class="contact" id="contact">
-    <form id="contactForm" onsubmit="sendEmail(event)">
+        <form id="contactForm" onsubmit="sendToWhatsApp(event)">
       <div class="f-c">
-      <div class="row1 br">
-        <div class="item"><h5>Name*</h5></div>
-        <div class="item"><input type="text" name="name" required></div>
+        <div class="row1 br">
+          <div class="item"><h5>Name *</h5></div>
+          <div class="item"><input type="text" name="name" required></div>
+        </div>
+        <div class="row1">
+          <div class="item"><h5>Comments *</h5></div>
+          <div class="item"><textarea name="comments" required></textarea></div>
+        </div>
       </div>
-      <div class="row1">
-        <div class="item"><h5>Comments*</h5></div>
-        <div class="item"><textarea name="comments" required></textarea></div>
-      </div>
-    </div>
-      <button type="submit" class="but">Send Me</button>
+      <button type="submit" class="but">Send</button>
     </form>
     
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-      (function() {
-        emailjs.init("Z2iFAKi8K1GPahq_u"); // Replace with your EmailJS public key
-      })();
+      function sendToWhatsApp(event) {
+        event.preventDefault(); // Prevent form submission
     
-      function sendEmail(event) {
-        event.preventDefault();
+        // Get form data
         const form = document.getElementById('contactForm');
-        const formData = new FormData(form);
+        const name = form.querySelector('input[name="name"]').value;
+        const comments = form.querySelector('textarea[name="comments"]').value;
     
-        emailjs.sendForm('service_4gc6ej6', 'template_ijkx1mr', form)
-          .then(() => alert('Email sent successfully!'))
-          .catch(() => alert('Failed to send email.'));
+        // Construct WhatsApp message
+        const message = `Name: ${encodeURIComponent(name)}%0AComments: ${encodeURIComponent(comments)}`;
+    
+        // Redirect to WhatsApp
+        const phoneNumber = '919080924519'; // Replace with your phone number
+        const whatsappURL = `https://wa.me/${9080924519}?text=${message}`;
+        window.open(whatsappURL, '_blank'); // Open in a new tab
       }
     </script>
     
