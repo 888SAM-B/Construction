@@ -87,33 +87,44 @@ What sets us apart is our dedication to customer satisfaction, transparency, and
   <div class="contact" id="contact">
     <form id="contactForm" onsubmit="sendToWhatsApp(event)">
       <div class="f-c">
-        <div class="row1 br">
-          <div class="item"><h5>Name*</h5></div>
+        <div class="row1 br ">
+          <div class="item"><h5>Name<sup> *</sup></h5></div>
           <div class="item"><input type="text" name="name" required></div>
         </div>
         <div class="row1">
-          <div class="item"><h5>Comments<sup>*</sup></h5></div>
+          <div class="item"><h5>Ph No<sup> *</sup></h5></div>
+          <div class="item"><input type="number" name="phno" required></div>
+        </div>
+        </div>
+        <div class="f-c">  
+        <div class="row1 br">
+          <div class="item"><h5>Email ID<sup> *</sup></h5></div>
+          <div class="item"><input type="email" name="mailid" required></div>
+        </div>
+        <div class="row1 ">
+          <div class="item"><h5>Your Comments<sup>*</sup></h5></div>
           <div class="item"><textarea name="comments" required></textarea></div>
         </div>
       </div>
       <button type="submit" class="but">Send</button>
     </form>
-    
     <script>
       function sendToWhatsApp(event) {
         event.preventDefault(); // Prevent form submission
-    
+  
         // Get form data
         const form = document.getElementById('contactForm');
         const name = form.querySelector('input[name="name"]').value;
+        const mailid = form.querySelector('input[name="mailid"]').value;
+        const phno = form.querySelector('input[name="phno"]').value; // Added phone number
         const comments = form.querySelector('textarea[name="comments"]').value;
-    
+  
         // Construct WhatsApp message
-        const message = `Name: ${encodeURIComponent(name)}%0AComments: ${encodeURIComponent(comments)}`;
-    
+        const message = `Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(mailid)}%0APhone: ${encodeURIComponent(phno)}%0AComments: ${encodeURIComponent(comments)}`;
+  
         // Redirect to WhatsApp
-        const phoneNumber = '919080924519'; // Replace with your phone number
-        const whatsappURL = `https://wa.me/${9080924519}?text=${message}`;
+        const phoneNumber = '919080924519'; // Correct phone number with country code
+        const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
         window.open(whatsappURL, '_blank'); // Open in a new tab
       }
     </script>
