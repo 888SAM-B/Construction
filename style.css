@@ -6,7 +6,7 @@
     --c4:#F6F4F0;
 }
 html{
-    
+    overflow-x:hidden;
     scroll-behavior: smooth;
 }
 
